@@ -1,26 +1,43 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 
 int main(){
-    #ifdef ALGO
-    int length(char s[]){
+    int length(char * s){
         int l=0 ;
-        int c = *s ;
-        while (c != 0 ){
+        while (*s != '\0' ){
             l++ ;
-            c=*(s+l) ;
+            s=s+1 ;
         }
-        return l ;
-            
+        return l ;   
     }
+ 
+    
+    char * alloc(char * s) {
+        int l = 1+length(s) ;
+        char * a = malloc(l * sizeof(char)) ;
+        return a ;
+        }
+    #ifdef ALGO
+    void copy_alloc(char * s){
+        char * a = alloc(s);
+        int i = 0; 
+        while *(s+i) != O {
+            *(a+i) = *(s+i) ;
+            ++i ;
+        }
+        a*(s+i)='\0' ;
+        return a ;     
+    }
+
     #endif
 
-    char s[] = "hello" ;
+    char * s = "hello" ;
     int a= *s ;
     int b= *(s+5) ;
     printf("a= %d\n", a) ;
     printf("b=%d\n", b) ;
     int c = length(s) ;
     printf("c=%d\n",c) ;
+    char * d = alloc(s) ;
 }

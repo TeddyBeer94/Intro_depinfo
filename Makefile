@@ -1,11 +1,13 @@
-Date.o: Datexe.c Date.c Date.h
-	gcc -c Datexe.c
 
-Date : Date.o
+Date.o : Date.h Date.c Datexec.c
+	gcc -c Datexec.c
+
+Date : Date.o 
 	gcc -o Date.o
 
-run : Date
+
+Run : Date
 	./Date
 
-clear:
+clear : 
 	rm -f Date *.o
