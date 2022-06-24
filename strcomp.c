@@ -21,7 +21,7 @@ int main(){
                 return -1 ;
             }
         } ; 
-        #if (L1 < L2) {
+        if (L1 < L2) {
           return 1 ;
         }
         if (L1 = L2) {
@@ -33,10 +33,5 @@ int main(){
     
     #endif
 
-    char c = 'c' ; 
-    char m = 'm' ;
-    if  (c < m ){
-        printf("c est plus petit que f\n");
-    }
 
 }

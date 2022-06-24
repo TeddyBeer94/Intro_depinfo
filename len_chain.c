@@ -18,19 +18,33 @@ int main(){
         char * a = malloc(l * sizeof(char)) ;
         return a ;
         }
+
     #ifdef ALGO
     void copy_alloc(char * s){
         char * a = alloc(s);
-        int i = 0; 
-        while *(s+i) != O {
+        int i = 0 ; 
+        while (*(s+i) != '\0') {
             *(a+i) = *(s+i) ;
             ++i ;
         }
-        a*(s+i)='\0' ;
-        return a ;     
+        *(a+i)='\0' ;    
     }
 
     #endif
+
+    int nb_de_e(char * s){
+        int res = 0 ; ;
+        char a = *s ;
+        int i = 0 ;
+        while (a != '\0') {
+            if (*s = 'e'){
+                ++res ;
+            }
+            ++i ;
+            a= *(s+i) ;
+        }
+        return res ;
+    }
 
     char * s = "hello" ;
     int a= *s ;
