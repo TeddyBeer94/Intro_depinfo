@@ -21,6 +21,7 @@ Elevator *create_elevator(int c, int CF, PersonList *PL);
 Building *create_building(int nF, Elevator * E, PersonList **WL);
 
 PersonList* exitElevator(Elevator *e);
+int taille(PersonList * L);
 PersonList* enterElevator(Elevator *e, PersonList *list);
 void stepElevator(Building *b);
 
