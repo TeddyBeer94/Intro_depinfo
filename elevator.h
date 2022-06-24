@@ -16,23 +16,11 @@ typedef struct _Building {
     PersonList **waitingLists; // array of waiting list (one per floor)
 } Building;
 
-Elevator *create_elevator(int c, int CF, PersonList *PL){
-    Elevator * E ;
-    E -> capacity = cabine ;
-    E -> currentFloor = CF ;
-    E -> persons = PL ;
-    return E
-}
+Elevator *create_elevator(int c, int CF, PersonList *PL);
 
-Building *create_building(int nF, Elevator * E, PersonList **WL){
-    Building * B ;
-    B -> nbFloor = nF ;
-    B -> elevator = E ;
-    B -> waitingLists = WL
-    return B
-};
+Building *create_building(int nF, Elevator * E, PersonList **WL);
 
-PersonList* exitElevator(Elevator *e)
+PersonList* exitElevator(Elevator *e);
 PersonList* enterElevator(Elevator *e, PersonList *list);
 void stepElevator(Building *b);
 
