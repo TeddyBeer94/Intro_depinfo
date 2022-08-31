@@ -1,13 +1,21 @@
 
-Date.o : Date.h Date.c Datexec.c
-	gcc -c Datexec.c
-
-Date : Date.o 
-	gcc -o Date.o
 
 
-Run : Date
-	./Date
+
+person.o :  person.h person.c
+	gcc -c person.c
+
+elevator.o : elevator.c elevator.h person.h
+	gcc -c elevator.c
+
+main.o : main.c elevator.h 
+	gcc -c main.c  
+
+main : main.o elevator.o person.o
+	gcc -c main main.o elevator.o person.o -lncurses
+	
+Run : 
+	./main
 
 clear : 
-	rm -f Date *.o
+	rm -f main*.o
