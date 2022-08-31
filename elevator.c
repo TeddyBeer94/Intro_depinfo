@@ -1,4 +1,7 @@
+#include <ncurses.h>
+#include <stdlib.h>
 #include "elevator.h"
+
 
 Elevator *create_elevator(int c, int CF, PersonList *PL){
     Elevator * E ;
