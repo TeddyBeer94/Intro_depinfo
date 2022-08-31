@@ -1,6 +1,5 @@
-#ifndef PERSON_H
-#define PERSON_H
 
+#include "stdlib.h"
 #include "person.h"
 
 Person* createPerson(int s, int d){
@@ -15,5 +14,3 @@ PersonList* insert(Person *p, PersonList *list){
     L-> next = list ;
     return L ;
 }
-
-#endif
