@@ -1,4 +1,7 @@
 
+
+
+
 person.o :  person.h person.c
 	gcc -c person.c
 
